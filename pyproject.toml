@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tinyvm-Flaxot"
+version = "0.1.0"
+description = "A small C-powered stack-based bytecode virtual machine."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: C",
+  "Programming Language :: Python :: Implementation :: CPython"
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

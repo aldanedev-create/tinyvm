@@ -64,6 +64,16 @@ CMAKE_BINARY_DIR = C:\Users\aldan\Downloads\tinyvm\build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	"C:\Program Files\CMake\bin\ctest.exe" $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
@@ -129,41 +139,17 @@ tinyvm_core/fast:
 .PHONY : tinyvm_core/fast
 
 #=============================================================================
-# Target rules for targets named tinyvm_smoke
+# Target rules for targets named tinyvm_tests
 
 # Build rule for target.
-tinyvm_smoke: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 tinyvm_smoke
-.PHONY : tinyvm_smoke
+tinyvm_tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 tinyvm_tests
+.PHONY : tinyvm_tests
 
 # fast build rule for target.
-tinyvm_smoke/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyvm_smoke.dir\build.make CMakeFiles/tinyvm_smoke.dir/build
-.PHONY : tinyvm_smoke/fast
-
-src/core/main.obj: src/core/main.c.obj
-.PHONY : src/core/main.obj
-
-# target to build an object file
-src/core/main.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyvm_smoke.dir\build.make CMakeFiles/tinyvm_smoke.dir/src/core/main.c.obj
-.PHONY : src/core/main.c.obj
-
-src/core/main.i: src/core/main.c.i
-.PHONY : src/core/main.i
-
-# target to preprocess a source file
-src/core/main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyvm_smoke.dir\build.make CMakeFiles/tinyvm_smoke.dir/src/core/main.c.i
-.PHONY : src/core/main.c.i
-
-src/core/main.s: src/core/main.c.s
-.PHONY : src/core/main.s
-
-# target to generate assembly for a file
-src/core/main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyvm_smoke.dir\build.make CMakeFiles/tinyvm_smoke.dir/src/core/main.c.s
-.PHONY : src/core/main.c.s
+tinyvm_tests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyvm_tests.dir\build.make CMakeFiles/tinyvm_tests.dir/build
+.PHONY : tinyvm_tests/fast
 
 src/core/stack.obj: src/core/stack.c.obj
 .PHONY : src/core/stack.obj
@@ -213,6 +199,54 @@ src/core/value.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyvm_core.dir\build.make CMakeFiles/tinyvm_core.dir/src/core/value.c.s
 .PHONY : src/core/value.c.s
 
+src/core/vm.obj: src/core/vm.c.obj
+.PHONY : src/core/vm.obj
+
+# target to build an object file
+src/core/vm.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyvm_core.dir\build.make CMakeFiles/tinyvm_core.dir/src/core/vm.c.obj
+.PHONY : src/core/vm.c.obj
+
+src/core/vm.i: src/core/vm.c.i
+.PHONY : src/core/vm.i
+
+# target to preprocess a source file
+src/core/vm.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyvm_core.dir\build.make CMakeFiles/tinyvm_core.dir/src/core/vm.c.i
+.PHONY : src/core/vm.c.i
+
+src/core/vm.s: src/core/vm.c.s
+.PHONY : src/core/vm.s
+
+# target to generate assembly for a file
+src/core/vm.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyvm_core.dir\build.make CMakeFiles/tinyvm_core.dir/src/core/vm.c.s
+.PHONY : src/core/vm.c.s
+
+tests/test_vm.obj: tests/test_vm.c.obj
+.PHONY : tests/test_vm.obj
+
+# target to build an object file
+tests/test_vm.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyvm_tests.dir\build.make CMakeFiles/tinyvm_tests.dir/tests/test_vm.c.obj
+.PHONY : tests/test_vm.c.obj
+
+tests/test_vm.i: tests/test_vm.c.i
+.PHONY : tests/test_vm.i
+
+# target to preprocess a source file
+tests/test_vm.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyvm_tests.dir\build.make CMakeFiles/tinyvm_tests.dir/tests/test_vm.c.i
+.PHONY : tests/test_vm.c.i
+
+tests/test_vm.s: tests/test_vm.c.s
+.PHONY : tests/test_vm.s
+
+# target to generate assembly for a file
+tests/test_vm.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyvm_tests.dir\build.make CMakeFiles/tinyvm_tests.dir/tests/test_vm.c.s
+.PHONY : tests/test_vm.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -221,17 +255,21 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... test
 	@echo ... tinyvm_core
-	@echo ... tinyvm_smoke
-	@echo ... src/core/main.obj
-	@echo ... src/core/main.i
-	@echo ... src/core/main.s
+	@echo ... tinyvm_tests
 	@echo ... src/core/stack.obj
 	@echo ... src/core/stack.i
 	@echo ... src/core/stack.s
 	@echo ... src/core/value.obj
 	@echo ... src/core/value.i
 	@echo ... src/core/value.s
+	@echo ... src/core/vm.obj
+	@echo ... src/core/vm.i
+	@echo ... src/core/vm.s
+	@echo ... tests/test_vm.obj
+	@echo ... tests/test_vm.i
+	@echo ... tests/test_vm.s
 .PHONY : help
 
 

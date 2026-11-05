@@ -1,0 +1,40 @@
+name: Compile C Extension and Commit
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'src/**'       # Run when source C files change
+      - 'setup.py'     # Run when build settings change
+
+jobs:
+  build-and-push:
+    runs-on: windows-latest
+    permissions:
+      contents: write   # Gives GitHub Actions permission to commit to your repo
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11' # Set this to match your local computer's Python version (e.g., '3.11', '3.12')
+
+    - name: Compile C Extension In-Place
+      run: |
+        python -m pip install --upgrade pip setuptools wheel
+        # This compiles the files in src/ into a single .pyd binary inside the tinyvm folder
+        python setup.py build_ext --inplace
+
+    - name: Commit and Push Compiled Binary
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "41898282+github-actions[bot]@://github.com"
+        
+        # Stage the generated compiled binary (.pyd file)
+        git add tinyvm/*.pyd
+        
+        # Commit and push back to main if there are changes. [skip ci] prevents an infinite build loop.
+        git diff-index --quiet HEAD || (git commit -m "chore: auto-compile C extension [skip ci]" && git push origin main)

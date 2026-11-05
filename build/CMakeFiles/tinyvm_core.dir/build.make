@@ -101,19 +101,36 @@ CMakeFiles/tinyvm_core.dir/src/core/stack.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/tinyvm_core.dir/src/core/stack.c.s"
 	C:\Users\aldan\AppData\Local\Microsoft\WinGet\Packages\BrechtSanders.WinLibs.POSIX.UCRT_Microsoft.Winget.Source_8wekyb3d8bbwe\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\aldan\Downloads\tinyvm\src\core\stack.c -o CMakeFiles\tinyvm_core.dir\src\core\stack.c.s
 
+CMakeFiles/tinyvm_core.dir/src/core/vm.c.obj: CMakeFiles/tinyvm_core.dir/flags.make
+CMakeFiles/tinyvm_core.dir/src/core/vm.c.obj: CMakeFiles/tinyvm_core.dir/includes_C.rsp
+CMakeFiles/tinyvm_core.dir/src/core/vm.c.obj: C:/Users/aldan/Downloads/tinyvm/src/core/vm.c
+CMakeFiles/tinyvm_core.dir/src/core/vm.c.obj: CMakeFiles/tinyvm_core.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\aldan\Downloads\tinyvm\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/tinyvm_core.dir/src/core/vm.c.obj"
+	C:\Users\aldan\AppData\Local\Microsoft\WinGet\Packages\BrechtSanders.WinLibs.POSIX.UCRT_Microsoft.Winget.Source_8wekyb3d8bbwe\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tinyvm_core.dir/src/core/vm.c.obj -MF CMakeFiles\tinyvm_core.dir\src\core\vm.c.obj.d -o CMakeFiles\tinyvm_core.dir\src\core\vm.c.obj -c C:\Users\aldan\Downloads\tinyvm\src\core\vm.c
+
+CMakeFiles/tinyvm_core.dir/src/core/vm.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/tinyvm_core.dir/src/core/vm.c.i"
+	C:\Users\aldan\AppData\Local\Microsoft\WinGet\Packages\BrechtSanders.WinLibs.POSIX.UCRT_Microsoft.Winget.Source_8wekyb3d8bbwe\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\aldan\Downloads\tinyvm\src\core\vm.c > CMakeFiles\tinyvm_core.dir\src\core\vm.c.i
+
+CMakeFiles/tinyvm_core.dir/src/core/vm.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/tinyvm_core.dir/src/core/vm.c.s"
+	C:\Users\aldan\AppData\Local\Microsoft\WinGet\Packages\BrechtSanders.WinLibs.POSIX.UCRT_Microsoft.Winget.Source_8wekyb3d8bbwe\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\aldan\Downloads\tinyvm\src\core\vm.c -o CMakeFiles\tinyvm_core.dir\src\core\vm.c.s
+
 # Object files for target tinyvm_core
 tinyvm_core_OBJECTS = \
 "CMakeFiles/tinyvm_core.dir/src/core/value.c.obj" \
-"CMakeFiles/tinyvm_core.dir/src/core/stack.c.obj"
+"CMakeFiles/tinyvm_core.dir/src/core/stack.c.obj" \
+"CMakeFiles/tinyvm_core.dir/src/core/vm.c.obj"
 
 # External object files for target tinyvm_core
 tinyvm_core_EXTERNAL_OBJECTS =
 
 libtinyvm_core.a: CMakeFiles/tinyvm_core.dir/src/core/value.c.obj
 libtinyvm_core.a: CMakeFiles/tinyvm_core.dir/src/core/stack.c.obj
+libtinyvm_core.a: CMakeFiles/tinyvm_core.dir/src/core/vm.c.obj
 libtinyvm_core.a: CMakeFiles/tinyvm_core.dir/build.make
 libtinyvm_core.a: CMakeFiles/tinyvm_core.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\aldan\Downloads\tinyvm\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C static library libtinyvm_core.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\aldan\Downloads\tinyvm\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C static library libtinyvm_core.a"
 	$(CMAKE_COMMAND) -P CMakeFiles\tinyvm_core.dir\cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\tinyvm_core.dir\link.txt --verbose=$(VERBOSE)
 

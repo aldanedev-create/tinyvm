@@ -63,12 +63,12 @@ CMAKE_BINARY_DIR = C:\Users\aldan\Downloads\tinyvm\build
 
 # The main recursive "all" target.
 all: CMakeFiles/tinyvm_core.dir/all
-all: CMakeFiles/tinyvm_smoke.dir/all
+all: CMakeFiles/tinyvm_tests.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
 codegen: CMakeFiles/tinyvm_core.dir/codegen
-codegen: CMakeFiles/tinyvm_smoke.dir/codegen
+codegen: CMakeFiles/tinyvm_tests.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -77,7 +77,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/tinyvm_core.dir/clean
-clean: CMakeFiles/tinyvm_smoke.dir/clean
+clean: CMakeFiles/tinyvm_tests.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -87,12 +87,12 @@ clean: CMakeFiles/tinyvm_smoke.dir/clean
 CMakeFiles/tinyvm_core.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyvm_core.dir\build.make CMakeFiles/tinyvm_core.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyvm_core.dir\build.make CMakeFiles/tinyvm_core.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\aldan\Downloads\tinyvm\build\CMakeFiles --progress-num=1,2,3 "Built target tinyvm_core"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\aldan\Downloads\tinyvm\build\CMakeFiles --progress-num=1,2,3,4 "Built target tinyvm_core"
 .PHONY : CMakeFiles/tinyvm_core.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/tinyvm_core.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\aldan\Downloads\tinyvm\build\CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\aldan\Downloads\tinyvm\build\CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/tinyvm_core.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\aldan\Downloads\tinyvm\build\CMakeFiles 0
 .PHONY : CMakeFiles/tinyvm_core.dir/rule
@@ -104,7 +104,7 @@ tinyvm_core: CMakeFiles/tinyvm_core.dir/rule
 # codegen rule for target.
 CMakeFiles/tinyvm_core.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyvm_core.dir\build.make CMakeFiles/tinyvm_core.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\aldan\Downloads\tinyvm\build\CMakeFiles --progress-num=1,2,3 "Finished codegen for target tinyvm_core"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\aldan\Downloads\tinyvm\build\CMakeFiles --progress-num=1,2,3,4 "Finished codegen for target tinyvm_core"
 .PHONY : CMakeFiles/tinyvm_core.dir/codegen
 
 # clean rule for target.
@@ -113,36 +113,36 @@ CMakeFiles/tinyvm_core.dir/clean:
 .PHONY : CMakeFiles/tinyvm_core.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/tinyvm_smoke.dir
+# Target rules for target CMakeFiles/tinyvm_tests.dir
 
 # All Build rule for target.
-CMakeFiles/tinyvm_smoke.dir/all: CMakeFiles/tinyvm_core.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyvm_smoke.dir\build.make CMakeFiles/tinyvm_smoke.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyvm_smoke.dir\build.make CMakeFiles/tinyvm_smoke.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\aldan\Downloads\tinyvm\build\CMakeFiles --progress-num=4,5 "Built target tinyvm_smoke"
-.PHONY : CMakeFiles/tinyvm_smoke.dir/all
+CMakeFiles/tinyvm_tests.dir/all: CMakeFiles/tinyvm_core.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyvm_tests.dir\build.make CMakeFiles/tinyvm_tests.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyvm_tests.dir\build.make CMakeFiles/tinyvm_tests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\aldan\Downloads\tinyvm\build\CMakeFiles --progress-num=5,6 "Built target tinyvm_tests"
+.PHONY : CMakeFiles/tinyvm_tests.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/tinyvm_smoke.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\aldan\Downloads\tinyvm\build\CMakeFiles 5
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/tinyvm_smoke.dir/all
+CMakeFiles/tinyvm_tests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\aldan\Downloads\tinyvm\build\CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/tinyvm_tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\aldan\Downloads\tinyvm\build\CMakeFiles 0
-.PHONY : CMakeFiles/tinyvm_smoke.dir/rule
+.PHONY : CMakeFiles/tinyvm_tests.dir/rule
 
 # Convenience name for target.
-tinyvm_smoke: CMakeFiles/tinyvm_smoke.dir/rule
-.PHONY : tinyvm_smoke
+tinyvm_tests: CMakeFiles/tinyvm_tests.dir/rule
+.PHONY : tinyvm_tests
 
 # codegen rule for target.
-CMakeFiles/tinyvm_smoke.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyvm_smoke.dir\build.make CMakeFiles/tinyvm_smoke.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\aldan\Downloads\tinyvm\build\CMakeFiles --progress-num=4,5 "Finished codegen for target tinyvm_smoke"
-.PHONY : CMakeFiles/tinyvm_smoke.dir/codegen
+CMakeFiles/tinyvm_tests.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyvm_tests.dir\build.make CMakeFiles/tinyvm_tests.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\aldan\Downloads\tinyvm\build\CMakeFiles --progress-num=5,6 "Finished codegen for target tinyvm_tests"
+.PHONY : CMakeFiles/tinyvm_tests.dir/codegen
 
 # clean rule for target.
-CMakeFiles/tinyvm_smoke.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyvm_smoke.dir\build.make CMakeFiles/tinyvm_smoke.dir/clean
-.PHONY : CMakeFiles/tinyvm_smoke.dir/clean
+CMakeFiles/tinyvm_tests.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\tinyvm_tests.dir\build.make CMakeFiles/tinyvm_tests.dir/clean
+.PHONY : CMakeFiles/tinyvm_tests.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

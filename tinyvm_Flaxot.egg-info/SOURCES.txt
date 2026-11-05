@@ -1,0 +1,17 @@
+pyproject.toml
+setup.py
+src/core/stack.c
+src/core/value.c
+src/core/vm.c
+src/python/module.c
+src/core/stack.c
+src/core/value.c
+src/core/vm.c
+src/python/module.c
+tinyvm/__init__.py
+tinyvm/assembler.py
+tinyvm/engine.py
+tinyvm_Flaxot.egg-info/PKG-INFO
+tinyvm_Flaxot.egg-info/SOURCES.txt
+tinyvm_Flaxot.egg-info/dependency_links.txt
+tinyvm_Flaxot.egg-info/top_level.txt

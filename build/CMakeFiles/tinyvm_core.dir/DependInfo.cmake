@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/aldan/Downloads/tinyvm/src/core/stack.c" "CMakeFiles/tinyvm_core.dir/src/core/stack.c.obj" "gcc" "CMakeFiles/tinyvm_core.dir/src/core/stack.c.obj.d"
   "C:/Users/aldan/Downloads/tinyvm/src/core/value.c" "CMakeFiles/tinyvm_core.dir/src/core/value.c.obj" "gcc" "CMakeFiles/tinyvm_core.dir/src/core/value.c.obj.d"
+  "C:/Users/aldan/Downloads/tinyvm/src/core/vm.c" "CMakeFiles/tinyvm_core.dir/src/core/vm.c.obj" "gcc" "CMakeFiles/tinyvm_core.dir/src/core/vm.c.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

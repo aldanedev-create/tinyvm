@@ -51,5 +51,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/tinyvm_core.dir/DependInfo.cmake"
-  "CMakeFiles/tinyvm_smoke.dir/DependInfo.cmake"
+  "CMakeFiles/tinyvm_tests.dir/DependInfo.cmake"
   )
