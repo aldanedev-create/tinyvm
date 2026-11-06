@@ -1,3 +1,0 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\tinyvm_smoke.dir/objects.a
-C:\Users\aldan\AppData\Local\Microsoft\WinGet\Packages\BrechtSanders.WinLibs.POSIX.UCRT_Microsoft.Winget.Source_8wekyb3d8bbwe\mingw64\bin\ar.exe qc CMakeFiles\tinyvm_smoke.dir/objects.a @CMakeFiles\tinyvm_smoke.dir\objects1.rsp
-C:\Users\aldan\AppData\Local\Microsoft\WinGet\Packages\BrechtSanders.WinLibs.POSIX.UCRT_Microsoft.Winget.Source_8wekyb3d8bbwe\mingw64\bin\gcc.exe -Wl,--whole-archive CMakeFiles\tinyvm_smoke.dir/objects.a -Wl,--no-whole-archive -o tinyvm_smoke.exe -Wl,--out-implib,libtinyvm_smoke.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\tinyvm_smoke.dir\linkLibs.rsp

@@ -1,5 +1,0 @@
-C:/Users/aldan/Downloads/tinyvm/build/CMakeFiles/tinyvm_core.dir
-C:/Users/aldan/Downloads/tinyvm/build/CMakeFiles/tinyvm_tests.dir
-C:/Users/aldan/Downloads/tinyvm/build/CMakeFiles/test.dir
-C:/Users/aldan/Downloads/tinyvm/build/CMakeFiles/edit_cache.dir
-C:/Users/aldan/Downloads/tinyvm/build/CMakeFiles/rebuild_cache.dir
