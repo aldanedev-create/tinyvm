@@ -4,10 +4,6 @@ src/core/stack.c
 src/core/value.c
 src/core/vm.c
 src/python/module.c
-src/core/stack.c
-src/core/value.c
-src/core/vm.c
-src/python/module.c
 tinyvm/__init__.py
 tinyvm/assembler.py
 tinyvm/engine.py
